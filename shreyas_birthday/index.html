@@ -213,7 +213,7 @@
   <div class="container" id="mainContent">
     <h1>Welcome to Shreya’s Birthday at Hogwarts 🎓</h1>
     <h2>✨ A magical day for the most magical girl ✨</h2>
-    <img src="our-photo.jpg" alt="Our Photo" class="photo" onclick="startMagic()" />
+    <img src="our-photo.jpg" alt="Our Photo" onclick="playsong()">
     <div class="typing">Click the photo to cast a birthday spell 🪄</div>
     <button onclick="replaySurprise()">🔁 Replay Surprise</button>
   </div>
@@ -228,8 +228,12 @@
   </div>
 
   <audio src="./song.mp3" autoplay loop id="audioID"></audio>
-
+  
   <script>
+    function playSong(){
+    const audioElement = document.getElementById("audioID")
+    audioElement.play();
+    }
     document.body.style.background = 'black';
 
     let count = 3;
